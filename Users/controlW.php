@@ -1,0 +1,41 @@
+<?php
+if(isset($_GET['idM'])){
+    $idM=$_GET['idM'];
+    $base="reports";
+    $connection=mysqli_connect("localhost","root","");
+    $db=mysqli_select_db($connection,$base);
+    $request="SELECT * FROM cumulate WHERE Id=$idM";
+    $Query=mysqli_query($connection,$request);
+    $Res=mysqli_fetch_array($Query);
+    $_SESSION['idw']=$Res[0];
+    $_SESSION['DateDw']=$Res[1];
+    $_SESSION['DateFw']=$Res[2];
+    $_SESSION['case1w']=$Res[3];
+    $_SESSION['case2w']=$Res[4];
+    $_SESSION['case3w']=$Res[5];
+    $_SESSION['case4w']=$Res[6];
+    $_SESSION['case5w']=$Res[7];
+    $_SESSION['case6w']=$Res[8];
+    $_SESSION['case7w']=$Res[9];
+    $_SESSION['case8w']=$Res[10];
+    $_SESSION['case9w']=$Res[11];
+    $_SESSION['case10w']=$Res[12];
+    $_SESSION['case11w']=$Res[13];
+    $_SESSION['case12w']=$Res[14];
+    $_SESSION['case13w']=$Res[15];
+    $_SESSION['case14w']=$Res[16];
+    $_SESSION['case15w']=$Res[17];
+    $_SESSION['case16w']=$Res[18];
+    $_SESSION['case17w']=$Res[19];
+    $_SESSION['case18w']=$Res[20];
+    $_SESSION['case19w']=$Res[21];
+    $_SESSION['case20w']=$Res[22];
+    $_SESSION['case21w']=$Res[23];
+    $_SESSION['case22w']=$Res[24];
+    $_SESSION['case23w']=$Res[25];
+    $_SESSION['case24w']=$Res[26];
+    $_SESSION['case25w']=$Res[27];
+    $_SESSION['case26w']=$Res[28];
+    header("Location: http://localhost/Gestion-rapports/Users/ModifierW.php");
+}
+?>
